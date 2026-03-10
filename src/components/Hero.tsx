@@ -55,30 +55,7 @@ export const Hero = () => {
                                 />
                             </div>
 
-                            {/* Floating Tech Icons - Simplified for now, can add more later */}
-                            <motion.div
-                                animate={{ y: [0, -10, 0] }}
-                                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                                className="absolute top-[20%] right-[10%] p-3 bg-white rounded-xl shadow-lg border border-gray-100"
-                            >
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React" className="w-8 h-8" />
-                            </motion.div>
 
-                            <motion.div
-                                animate={{ y: [0, 10, 0] }}
-                                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                                className="absolute bottom-[30%] left-[-5%] p-3 bg-white rounded-xl shadow-lg border border-gray-100"
-                            >
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" alt="TypeScript" className="w-8 h-8" />
-                            </motion.div>
-
-                            <motion.div
-                                animate={{ scale: [1, 1.1, 1] }}
-                                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-                                className="absolute top-[40%] left-[5%] p-2 bg-white rounded-lg shadow-md border border-gray-50"
-                            >
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Vercel_logo_2024.svg" alt="Vercel" className="w-6 h-6" />
-                            </motion.div>
                         </div>
                     </motion.div>
                 </div>
