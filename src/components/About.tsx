@@ -22,29 +22,15 @@ export const About = () => {
                     viewport={{ once: true }}
                 >
                     <h2 className="text-3xl font-bold mb-6">About Me</h2>
-                    <div className="space-y-4 text-gray-400">
+                    <div className="space-y-4 text-gray-600">
                         <p>
-                            I am a passionate Software Engineer currently working at <strong>Teclusion.ai</strong>.
-                            My journey in tech is driven by a desire to solve complex problems through innovative code.
-                        </p>
-                        <p>
-                            I love working across the stack, focusing on creating seamless integrations between
-                            robust backends and intuitive, beautiful frontends.
+                            I am a Software Engineer who develops and deploys full-stack applications.
+                            I also build AI agent chatbots and intelligent systems, and I am passionate
+                            about innovation and solving real-world problems through technology.
                         </p>
                     </div>
 
-                    <div className="mt-8 grid grid-cols-2 gap-4">
-                        <div className="p-4 bg-gray-50 border border-gray-100 rounded-2xl">
-                            <Code2 className="text-primary mb-2" size={24} />
-                            <h3 className="font-semibold">Full Stack</h3>
-                            <p className="text-xs text-gray-500">React, Node.js, TypeScript</p>
-                        </div>
-                        <div className="p-4 bg-gray-50 border border-gray-100 rounded-2xl">
-                            <Globe className="text-secondary mb-2" size={24} />
-                            <h3 className="font-semibold">Scalable</h3>
-                            <p className="text-xs text-gray-500">Cloud Infrastructure</p>
-                        </div>
-                    </div>
+
                 </motion.div>
 
                 <motion.div

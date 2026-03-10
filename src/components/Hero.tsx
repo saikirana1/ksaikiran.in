@@ -13,14 +13,17 @@ export const Hero = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                     >
-                        <div className="flex items-center gap-2 mb-6">
-                            <span className="text-xl font-bold tracking-[0.2em] text-primary uppercase">I am a Software Engineer</span>
+                        <div className="space-y-4">
+                            <h2 className="text-3xl font-bold text-gray-900">Hi there! 👋</h2>
+                            <h1 className="text-6xl md:text-8xl font-black tracking-tight text-gray-900 leading-[1.1]">
+                                I'm <span className="text-primary">Kira</span>
+                            </h1>
+                            <p className="text-xl font-medium text-gray-500 uppercase tracking-widest">
+                                Software Engineer
+                            </p>
                         </div>
 
-                        <h1 className="text-6xl md:text-8xl font-bold tracking-tight text-gray-900 mb-6 leading-[1.1]">
-                            I'm Sai Kiran <br />
-                            <span className="text-primary tracking-tighter">Building Scalable Solutions</span>
-                        </h1>
+
 
 
                         <motion.div

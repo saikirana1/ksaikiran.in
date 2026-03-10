@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, Instagram, Send } from 'lucide-react';
+import { Github, Linkedin, Instagram } from 'lucide-react';
 
 export const Contact = () => {
     const socialLinks = [
@@ -37,71 +37,29 @@ export const Contact = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-                    {/* Left side: Contact Info */}
+                <div className="max-w-3xl mx-auto">
                     <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         className="space-y-8"
                     >
-                        <div className="p-8 bg-blue-50 rounded-3xl border border-blue-100">
-                            <div className="flex items-center gap-4 mb-6">
-                                <div className="p-3 bg-white rounded-2xl shadow-sm text-primary">
-                                    <Mail size={24} />
-                                </div>
-                                <div>
-                                    <h3 className="text-xl font-bold text-gray-900">Email Me</h3>
-                                    <p className="text-gray-500">I usually respond within 24 hours.</p>
-                                </div>
-                            </div>
-                            <a
-                                href="mailto:saikirankasukurthi55@gmail.com"
-                                className="text-2xl font-bold text-primary hover:underline break-all"
-                            >
-                                saikirankasukurthi55@gmail.com
-                            </a>
-                        </div>
-
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 font-bold">
                             {socialLinks.map((social) => (
                                 <a
                                     key={social.name}
                                     href={social.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className={`flex flex-col items-center gap-3 p-6 ${social.bg} rounded-2xl border border-transparent hover:border-current transition-all group`}
+                                    className={`flex flex-col items-center gap-3 p-8 ${social.bg} rounded-3xl border border-transparent hover:border-current transition-all group`}
                                 >
                                     <div className={`${social.color} transition-transform group-hover:scale-110`}>
                                         {social.icon}
                                     </div>
-                                    <span className="text-sm font-semibold text-gray-700">{social.name}</span>
+                                    <span className="text-sm tracking-widest uppercase">{social.name}</span>
                                 </a>
                             ))}
                         </div>
-                    </motion.div>
-
-                    {/* Right side: Simple CTA */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="p-8 bg-gray-50 rounded-3xl border border-gray-100 flex flex-col items-center justify-center text-center h-full min-h-[300px]"
-                    >
-                        <div className="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center text-primary mb-6">
-                            <Send size={32} />
-                        </div>
-                        <h3 className="text-2xl font-bold text-gray-900 mb-4">Let's Build Something Great</h3>
-                        <p className="text-gray-500 mb-8 max-w-xs">
-                            If you have a project in mind or just want to discuss some ideas,
-                            I'm all ears!
-                        </p>
-                        <a
-                            href="mailto:saikirankasukurthi55@gmail.com"
-                            className="btn-primary w-full justify-center"
-                        >
-                            Say Hello
-                        </a>
                     </motion.div>
                 </div>
             </div>
