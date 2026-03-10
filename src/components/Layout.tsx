@@ -1,6 +1,6 @@
 import React, { type ReactNode } from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Menu, X, Mail } from 'lucide-react';
+import { Github, Linkedin, Menu, X, Mail, Instagram } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 interface LayoutProps {
@@ -14,6 +14,7 @@ const Navbar = () => {
     const navLinks = [
         { name: 'Home', path: '/' },
         { name: 'About', path: '/about' },
+        { name: 'Contact', path: '/contact' },
     ];
 
     return (
@@ -43,11 +44,11 @@ const Navbar = () => {
 
                     <div className="hidden md:flex items-center">
                         <a
-                            href="mailto:hi@saikiran.in"
+                            href="mailto:saikirankasukurthi55@gmail.com"
                             className="flex items-center gap-2 text-sm font-medium text-primary hover:underline"
                         >
                             <Mail size={16} />
-                            hi@saikiran.in
+                            saikirankasukurthi55@gmail.com
                         </a>
                     </div>
 
@@ -77,11 +78,11 @@ const Navbar = () => {
                             </Link>
                         ))}
                         <a
-                            href="mailto:hi@saikiran.in"
+                            href="mailto:saikirankasukurthi55@gmail.com"
                             className="flex items-center gap-2 px-3 py-2 text-primary font-medium"
                         >
                             <Mail size={16} />
-                            hi@saikiran.in
+                            saikirankasukurthi55@gmail.com
                         </a>
                     </div>
                 </motion.div>
@@ -98,11 +99,14 @@ const Footer = () => (
                     © 2026 Sai Kiran. Based in India.
                 </div>
                 <div className="flex space-x-6 mt-4 md:mt-0">
-                    <a href="https://github.com/saikirana1" className="hover:text-primary transition-colors">
+                    <a href="https://github.com/saikirana1" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                         <Github size={18} />
                     </a>
-                    <a href="https://www.linkedin.com/in/saikiran-kasukurthi-130748235/" className="hover:text-primary transition-colors">
+                    <a href="https://linkedin.com/in/ksaikiranin" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                         <Linkedin size={18} />
+                    </a>
+                    <a href="https://instagram.com/saikiran_a1" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                        <Instagram size={18} />
                     </a>
                 </div>
             </div>
