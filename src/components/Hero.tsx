@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Download, } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import pointingImg from '../assets/pointing_sai.png';
 
 export const Hero = () => {
@@ -27,16 +28,17 @@ export const Hero = () => {
                             their ideas into high quality products.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row items-center gap-4">
-                            <button className="btn-primary group">
-                                Book a Call
-                                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                            </button>
-                            <button className="btn-secondary">
-                                Download CV
-                                <Download size={18} />
-                            </button>
-                        </div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.3 }}
+                            className="flex flex-col sm:flex-row gap-4 mt-12"
+                        >
+                            <Link to="/contact" className="btn-primary group inline-flex items-center justify-center">
+                                <span>Contact Me</span>
+                                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+                            </Link>
+                        </motion.div>
                     </motion.div>
 
                     <motion.div

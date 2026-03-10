@@ -1,6 +1,6 @@
 import React, { type ReactNode } from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Menu, X, Mail, Instagram } from 'lucide-react';
+import { Github, Linkedin, Menu, X, Instagram } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 interface LayoutProps {
@@ -20,11 +20,7 @@ const Navbar = () => {
     return (
         <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between h-20">
-                    <Link to="/" className="text-2xl font-bold tracking-tight text-gray-900">
-                        saikiran
-                    </Link>
-
+                <div className="flex items-center justify-center h-20">
                     <div className="hidden md:block">
                         <div className="flex items-center space-x-8">
                             {navLinks.map((link) => (
@@ -40,16 +36,6 @@ const Navbar = () => {
                                 </Link>
                             ))}
                         </div>
-                    </div>
-
-                    <div className="hidden md:flex items-center">
-                        <a
-                            href="mailto:saikirankasukurthi55@gmail.com"
-                            className="flex items-center gap-2 text-sm font-medium text-primary hover:underline"
-                        >
-                            <Mail size={16} />
-                            saikirankasukurthi55@gmail.com
-                        </a>
                     </div>
 
                     <div className="md:hidden">
@@ -77,13 +63,6 @@ const Navbar = () => {
                                 {link.name}
                             </Link>
                         ))}
-                        <a
-                            href="mailto:saikirankasukurthi55@gmail.com"
-                            className="flex items-center gap-2 px-3 py-2 text-primary font-medium"
-                        >
-                            <Mail size={16} />
-                            saikirankasukurthi55@gmail.com
-                        </a>
                     </div>
                 </motion.div>
             )}
