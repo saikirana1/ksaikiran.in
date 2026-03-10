@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
+import { Contact } from './components/Contact';
 import './App.css';
 
 // Home Page Component
@@ -11,6 +12,7 @@ const Home = () => (
     <section id="about">
       <About />
     </section>
+    <Contact />
   </>
 );
 
@@ -21,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </Layout>
     </Router>
