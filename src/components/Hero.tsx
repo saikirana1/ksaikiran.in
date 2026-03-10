@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import pointingImg from '../assets/pointing_sai.png';
+import heroImg from '../assets/sai.png';
 
 export const Hero = () => {
     return (
@@ -22,8 +22,6 @@ export const Hero = () => {
                                 Software Engineer
                             </p>
                         </div>
-
-
 
 
                         <motion.div
@@ -48,12 +46,14 @@ export const Hero = () => {
                         {/* Background light gradient */}
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-50/50 rounded-full blur-3xl -z-10" />
 
-                        <div className="relative z-10 w-full max-w-[550px] mx-auto">
-                            <img
-                                src={pointingImg}
-                                alt="Sai Kiran pointing"
-                                className="w-full h-auto object-contain"
-                            />
+                        <div className="relative z-10 w-full max-w-[550px] mx-auto group">
+                            <div className="relative overflow-hidden rounded-3xl bg-white aspect-[4/5] shadow-2xl border border-gray-100">
+                                <img
+                                    src={heroImg}
+                                    alt="Sai Kiran"
+                                    className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                                />
+                            </div>
 
                             {/* Floating Tech Icons - Simplified for now, can add more later */}
                             <motion.div
