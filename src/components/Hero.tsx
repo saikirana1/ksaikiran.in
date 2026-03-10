@@ -60,7 +60,7 @@ export const Hero = () => {
                                 <img
                                     src={profileImg}
                                     alt="Sai Kiran"
-                                    className="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
+                                    className="w-full h-full object-cover rounded-2xl transition-all duration-700 hover:scale-105"
                                 />
                             </div>
 
