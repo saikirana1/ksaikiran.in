@@ -37,19 +37,19 @@ export const Projects = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.1 }}
-                        className="group glass rounded-3xl overflow-hidden"
+                        className="group bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
                     >
-                        <div className="aspect-video relative overflow-hidden bg-white/5">
-                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-background-dark/80 backdrop-blur-sm">
+                        <div className="aspect-video relative overflow-hidden bg-gray-50">
+                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-white/90 backdrop-blur-sm">
                                 <div className="flex gap-4">
-                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="p-3 bg-white text-black rounded-full hover:scale-110 transition-transform">
+                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="p-3 bg-primary text-white rounded-full hover:scale-110 transition-transform">
                                         <ExternalLink size={20} />
                                     </a>
                                 </div>
                             </div>
                             <div className="absolute top-4 left-4 flex gap-2">
                                 {project.tags.map(tag => (
-                                    <span key={tag} className="px-2 py-1 text-[10px] uppercase tracking-wider font-bold glass rounded text-white/70">
+                                    <span key={tag} className="px-2 py-1 text-[10px] uppercase tracking-wider font-bold bg-white/80 border border-gray-100 rounded text-gray-600">
                                         {tag}
                                     </span>
                                 ))}
@@ -62,7 +62,7 @@ export const Projects = () => {
                                     <h3 className="text-2xl font-bold mt-1">{project.title}</h3>
                                 </div>
                             </div>
-                            <p className="text-gray-400 line-clamp-2">{project.description}</p>
+                            <p className="text-gray-500 line-clamp-2">{project.description}</p>
                         </div>
                     </motion.div>
                 ))}

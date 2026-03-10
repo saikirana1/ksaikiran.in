@@ -34,12 +34,12 @@ export const About = () => {
                     </div>
 
                     <div className="mt-8 grid grid-cols-2 gap-4">
-                        <div className="p-4 glass rounded-2xl">
+                        <div className="p-4 bg-gray-50 border border-gray-100 rounded-2xl">
                             <Code2 className="text-primary mb-2" size={24} />
                             <h3 className="font-semibold">Full Stack</h3>
                             <p className="text-xs text-gray-500">React, Node.js, TypeScript</p>
                         </div>
-                        <div className="p-4 glass rounded-2xl">
+                        <div className="p-4 bg-gray-50 border border-gray-100 rounded-2xl">
                             <Globe className="text-secondary mb-2" size={24} />
                             <h3 className="font-semibold">Scalable</h3>
                             <p className="text-xs text-gray-500">Cloud Infrastructure</p>
@@ -59,10 +59,10 @@ export const About = () => {
                     </h3>
                     <div className="space-y-4">
                         {experiences.map((exp, index) => (
-                            <div key={index} className="p-6 glass rounded-2xl relative overflow-hidden group">
+                            <div key={index} className="p-6 bg-gray-50 border border-gray-100 rounded-2xl relative overflow-hidden group">
                                 <div className="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity">
                                     <a href={exp.link} target="_blank" rel="noopener noreferrer">
-                                        <Globe size={18} className="text-gray-400 hover:text-white" />
+                                        <Globe size={18} className="text-gray-400 hover:text-primary" />
                                     </a>
                                 </div>
                                 <div className="flex justify-between items-start mb-2">
@@ -70,9 +70,9 @@ export const About = () => {
                                         <h4 className="font-bold">{exp.role}</h4>
                                         <p className="text-primary text-sm">{exp.company}</p>
                                     </div>
-                                    <span className="text-xs text-gray-500 bg-white/5 px-2 py-1 rounded">{exp.period}</span>
+                                    <span className="text-xs text-gray-500 bg-white px-2 py-1 border border-gray-100 rounded">{exp.period}</span>
                                 </div>
-                                <p className="text-sm text-gray-400">{exp.description}</p>
+                                <p className="text-sm text-gray-500">{exp.description}</p>
                             </div>
                         ))}
                     </div>

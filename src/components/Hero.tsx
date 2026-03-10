@@ -1,70 +1,84 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Github, Linkedin, Code } from 'lucide-react';
-import profileImg from '../assets/sai.png';
+import { ArrowRight, Download, } from 'lucide-react';
+import pointingImg from '../assets/pointing_sai.png';
 
 export const Hero = () => {
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20">
-            {/* Background decoration */}
-            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[128px] -z-10" />
-            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-[128px] -z-10" />
-
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-white pt-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <motion.div
-                        initial={{ opacity: 0, x: -20 }}
+                        initial={{ opacity: 0, x: -30 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6, ease: "easeOut" }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
                     >
-                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium glass text-primary mb-6">
-                            <Code size={14} className="mr-2" />
-                            Software Engineer @ Teclusion.ai
-                        </span>
+                        <div className="flex items-center gap-2 mb-6">
+                            <span className="text-3xl font-bold text-gray-900">Hello Mate</span>
+                            <span className="text-3xl animate-bounce">👋</span>
+                        </div>
 
-                        <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6 leading-tight">
-                            Building digital <span className="text-gradient">experiences</span> <br />
-                            that matter.
+                        <h1 className="text-6xl md:text-8xl font-bold tracking-tight text-gray-900 mb-6 leading-[1.1]">
+                            I'm Sai Kiran <br />
+                            a <span className="text-primary">Web Developer</span>
                         </h1>
 
-                        <p className="max-w-xl text-lg text-gray-400 mb-10 leading-relaxed">
-                            Hi, I'm Sai Kiran. I specialize in building high-performance
-                            web applications with a focus on clean code and exceptional user experience.
+                        <p className="max-w-lg text-lg text-gray-500 mb-10 leading-relaxed">
+                            Hi, I'm Sai Kiran, a freelance web designer from India. I help brands turn
+                            their ideas into high quality products.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center gap-4">
-                            <button className="px-8 py-3 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition-colors flex items-center group">
-                                View Projects
-                                <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                            <button className="btn-primary group">
+                                Book a Call
+                                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                             </button>
-                            <div className="flex items-center gap-4 px-4 py-2 glass rounded-full">
-                                <a href="https://github.com/saikirana1" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                                    <Github size={20} />
-                                </a>
-                                <div className="w-px h-4 bg-white/10" />
-                                <a href="https://www.linkedin.com/in/saikiran-kasukurthi-130748235/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                                    <Linkedin size={20} />
-                                </a>
-                            </div>
+                            <button className="btn-secondary">
+                                Download CV
+                                <Download size={18} />
+                            </button>
                         </div>
                     </motion.div>
 
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.9, rotate: 5 }}
-                        animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                        className="relative hidden lg:block"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="relative"
                     >
-                        <div className="relative z-10 w-full max-w-[450px] aspect-square mx-auto">
-                            <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/20 rounded-3xl blur-3xl -z-10 animate-pulse" />
-                            <div className="w-full h-full rounded-3xl glass p-2 overflow-hidden border-2 border-white/10 hover:border-primary/30 transition-colors duration-500">
-                                <img
-                                    src={profileImg}
-                                    alt="Sai Kiran"
-                                    className="w-full h-full object-cover rounded-2xl transition-all duration-700 hover:scale-105"
-                                />
-                            </div>
+                        {/* Background light gradient */}
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-50/50 rounded-full blur-3xl -z-10" />
 
+                        <div className="relative z-10 w-full max-w-[550px] mx-auto">
+                            <img
+                                src={pointingImg}
+                                alt="Sai Kiran pointing"
+                                className="w-full h-auto object-contain"
+                            />
 
+                            {/* Floating Tech Icons - Simplified for now, can add more later */}
+                            <motion.div
+                                animate={{ y: [0, -10, 0] }}
+                                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                                className="absolute top-[20%] right-[10%] p-3 bg-white rounded-xl shadow-lg border border-gray-100"
+                            >
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React" className="w-8 h-8" />
+                            </motion.div>
+
+                            <motion.div
+                                animate={{ y: [0, 10, 0] }}
+                                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                                className="absolute bottom-[30%] left-[-5%] p-3 bg-white rounded-xl shadow-lg border border-gray-100"
+                            >
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" alt="TypeScript" className="w-8 h-8" />
+                            </motion.div>
+
+                            <motion.div
+                                animate={{ scale: [1, 1.1, 1] }}
+                                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+                                className="absolute top-[40%] left-[5%] p-2 bg-white rounded-lg shadow-md border border-gray-50"
+                            >
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Vercel_logo_2024.svg" alt="Vercel" className="w-6 h-6" />
+                            </motion.div>
                         </div>
                     </motion.div>
                 </div>

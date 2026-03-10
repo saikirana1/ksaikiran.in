@@ -1,21 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-    --color-primary: oklch(0.6 0.15 250);
-    --color-secondary: oklch(0.7 0.1 200);
-    --color-accent: oklch(0.8 0.1 150);
-    --color-background-dark: oklch(0.2 0.02 250);
-    --color-surface: oklch(0.25 0.02 250);
+    --color-primary: #007BFF;
+    --color-secondary: #6C757D;
+    --color-accent: #E7F1FF;
+    --color-background: #FFFFFF;
+    --color-surface: #F8F9FA;
+    --color-text-main: #212529;
+    --color-text-muted: #6C757D;
 }
 
 :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
 
-    color-scheme: dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: var(--color-background-dark);
+    color-scheme: light;
+    color: var(--color-text-main);
+    background-color: var(--color-background);
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -31,14 +33,22 @@ body {
 
 @layer base {
     * {
-        @apply border-white/10;
+        @apply border-black/5;
     }
 }
 
 .glass {
-    @apply bg-white/5 backdrop-blur-md border border-white/10;
+    @apply bg-white/70 backdrop-blur-md border border-black/5;
 }
 
 .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400;
+}
+
+.btn-primary {
+    @apply px-6 py-3 bg-[#007BFF] text-white font-semibold rounded-lg hover:bg-blue-700 transition-all shadow-sm flex items-center gap-2;
+}
+
+.btn-secondary {
+    @apply px-6 py-3 bg-white text-gray-700 border border-gray-200 font-semibold rounded-lg hover:bg-gray-50 transition-all shadow-sm flex items-center gap-2;
 }
