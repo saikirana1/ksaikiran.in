@@ -14,19 +14,14 @@ export const Hero = () => {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                     >
                         <div className="flex items-center gap-2 mb-6">
-                            <span className="text-3xl font-bold text-gray-900">Hello Mate</span>
-                            <span className="text-3xl animate-bounce">👋</span>
+                            <span className="text-xl font-bold tracking-[0.2em] text-primary uppercase">I am a Software Engineer</span>
                         </div>
 
                         <h1 className="text-6xl md:text-8xl font-bold tracking-tight text-gray-900 mb-6 leading-[1.1]">
                             I'm Sai Kiran <br />
-                            a <span className="text-primary">Web Developer</span>
+                            <span className="text-primary tracking-tighter">Building Scalable Solutions</span>
                         </h1>
 
-                        <p className="max-w-lg text-lg text-gray-500 mb-10 leading-relaxed">
-                            Hi, I'm Sai Kiran, a freelance web designer from India. I help brands turn
-                            their ideas into high quality products.
-                        </p>
 
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
