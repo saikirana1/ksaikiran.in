@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Briefcase, Code2, Globe } from 'lucide-react';
+import { Briefcase, Globe } from 'lucide-react';
 
 export const About = () => {
     const experiences = [
