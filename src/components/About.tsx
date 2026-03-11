@@ -54,7 +54,14 @@ export const About = () => {
                                 <div className="flex justify-between items-start mb-2">
                                     <div>
                                         <h4 className="font-bold">{exp.role}</h4>
-                                        <p className="text-primary text-sm">{exp.company}</p>
+                                        <a
+                                            href={exp.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-primary text-sm hover:underline transition-all"
+                                        >
+                                            {exp.company}
+                                        </a>
                                     </div>
                                     <span className="text-xs text-gray-500 bg-white px-2 py-1 border border-gray-100 rounded">{exp.period}</span>
                                 </div>
